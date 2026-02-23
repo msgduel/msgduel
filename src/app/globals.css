@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --neon: #00f0ff;
+  --neon2: #ff2d55;
+  --neon3: #a855f7;
+  --gold: #ffd700;
+}
+
+body {
+  background: #05050a;
+  color: #e2e8f0;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+/* Grid overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    linear-gradient(rgba(0,240,255,0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,240,255,0.015) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@layer components {
+  .btn-neon {
+    @apply px-6 py-3 font-display text-sm font-bold tracking-widest uppercase
+           border border-neon text-neon transition-all duration-300;
+  }
+  .btn-neon:hover {
+    @apply bg-neon text-arena-bg shadow-[0_0_30px_rgba(0,240,255,0.4)];
+  }
+
+  .btn-fire {
+    @apply px-6 py-3 font-display text-sm font-bold tracking-widest uppercase
+           bg-gradient-to-r from-neon2 to-red-600 text-white border-0
+           transition-all duration-300;
+    clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+  }
+  .btn-fire:hover {
+    @apply shadow-[0_8px_30px_rgba(255,45,85,0.4)] -translate-y-0.5;
+  }
+
+  .card-arena {
+    @apply bg-arena-surface border border-arena-border relative overflow-hidden;
+  }
+  .card-arena::before {
+    content: '';
+    @apply absolute top-0 left-0 right-0 h-0.5;
+    background: linear-gradient(90deg, var(--neon), var(--neon2), var(--neon3));
+  }
+
+  .text-gradient-neon {
+    @apply bg-gradient-to-r from-neon to-blue-400 bg-clip-text text-transparent;
+  }
+  .text-gradient-fire {
+    @apply bg-gradient-to-r from-neon2 to-gold bg-clip-text text-transparent;
+  }
+}

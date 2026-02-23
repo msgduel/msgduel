@@ -1,0 +1,39 @@
+{
+  "name": "msgduel-web",
+  "version": "0.1.0",
+  "private": true,
+  "description": "MsgDuel — 1v1 Strategy Battles. Next.js web app with x402 payments on Base.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.47.0",
+    "@xmtp/browser-sdk": "^6.2.0",
+    "next": "^15.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "viem": "^2.21.0",
+    "wagmi": "^2.14.0",
+    "@tanstack/react-query": "^5.62.0",
+    "connectkit": "^1.8.0",
+    "openai": "^4.73.0",
+    "nanoid": "^5.0.0",
+    "zustand": "^5.0.0",
+    "framer-motion": "^11.15.0",
+    "lucide-react": "^0.460.0",
+    "clsx": "^2.1.0",
+    "tailwind-merge": "^2.6.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "tailwindcss": "^3.4.0",
+    "postcss": "^8.4.0",
+    "autoprefixer": "^10.4.0"
+  }
+}
