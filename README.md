@@ -29,13 +29,7 @@ npm run dev
 
 Open http://localhost:3000
 
-## Deploy (Vercel)
 
-```bash
-# Push to GitHub, then:
-# 1. Import repo on vercel.com
-# 2. Add env vars
-# 3. Deploy
 ```
 
 ## Project Structure
